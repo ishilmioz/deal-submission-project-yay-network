@@ -1,0 +1,289 @@
+@font-face {
+  font-family: 'Thunder';
+  src: url('/fonts/semiBoldLC.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('/fonts/displayPro.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; 
+  width: 100%; 
+  margin: 0; 
+  padding: 20px; 
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center; 
+  animation: subtleFadeIn 2s ease-out;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  width: 38.5rem;
+  max-width: 38.5rem;
+  min-height: 47.0625rem;
+  max-height: 47.0625rem;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 4px;
+  border: 1px solid var(--YAY-White, #E3E2E3);
+  background: #0A0A0A;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+}
+
+.form-title {
+  align-self: stretch;
+  color: var(--YAY-White, #E3E2E3);
+  text-align: center;
+  font-family: Thunder;
+  font-size: 55px;
+  font-style: normal;
+  line-height: clamp(20px, 6vw, 47px);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-weight: 100;
+  margin-top: 3.81rem;
+
+}
+
+.form-desc {
+  width: 378px;
+  color: #E3E2E3;
+  text-align: center;
+  font-family: "SF Pro Display";
+  font-size: 0.8125rem;
+  line-height: 19px;
+  letter-spacing: 0.02438rem;
+  text-transform: uppercase;
+  margin-top:1rem;
+}
+
+.form-group input[name="dealName"] {
+  margin-top: 2.13rem;
+}
+
+.form-group input:not([name="dealName"]) {
+  margin-top: 2.81rem;
+}
+
+.form-group input[name="walletAddress"] {
+  margin-bottom: 2.81rem;
+}
+
+.form-input {
+  color: #fff !important;
+  caret-color: #fff;
+  background-color: transparent; /* mobilde beyaz kutu görünmesin */
+}
+
+/* Placeholder'ı da beyaza yaklaştır */
+.form-input::placeholder {
+  color: rgba(255,255,255,0.7);
+  opacity: 1; /* iOS Safari */
+}
+
+/* Otomatik doldurma (iOS/Android Chrome) sarı/griden kurtul ve yazıyı beyaz yap */
+.form-input:-webkit-autofill,
+.form-input:-webkit-autofill:hover,
+.form-input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #fff !important;
+  caret-color: #fff;
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset !important; /* sarı arka planı gizle */
+  box-shadow: 0 0 0px 1000px transparent inset !important;
+  transition: background-color 5000s ease-in-out 0s; /* renk flaşını engeller */
+}
+
+.form-input:hover {
+  transform: scale(1.02);
+  border-color: #ffffffff;
+}
+
+.form-submit-button {
+  margin-top:2.8125rem;
+  display: flex;
+  width: 265px;
+  height: 59px;
+  padding: 22px 0 15px 0;
+  justify-content: center;
+  align-items: center;
+  border-radius: 59.272px;
+  background: var(--YAY-Main-Color, #B3B2FB);
+  border: none;
+  cursor: pointer;
+  transition: transform 0.5s ease-in-out, background-color 0.2s ease-in-out;
+  
+  /* Text styling */
+  color: var(--YAY-Black-01, #17181B);
+  text-align: center;
+  font-family: Thunder;
+  font-size: 24px;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.72px;
+  text-transform: uppercase;
+}
+
+.form-submit-button:hover {
+  transform: scale(1.05);
+}
+
+.form-success {
+  margin-top: 15px;
+  text-align: center;
+  color: green;
+}
+
+.form-error {
+  margin-top: 15px;
+  text-align: center;
+  color: red;
+}
+
+.underline-input {
+  border: none;
+  border-bottom: 1px solid #BDBDBD;
+  width: 419.5px;
+  height: auto;
+  padding-bottom: 0.94rem;
+  background-color: transparent;
+  outline: none;
+  appearance: none;   
+  -webkit-appearance: none;
+  border-radius: 0;
+  color: inherit;
+  caret-color: currentColor;
+  font-family: "SF Pro Display";
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.78px;
+  text-transform: uppercase;
+}
+
+.underline-input:focus {
+  border-bottom: 1px solid white;
+  outline: none;
+}
+
+.underline-input:-webkit-autofill,
+.underline-input:-webkit-autofill:hover,
+.underline-input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+  box-shadow: 0 0 0 1000px transparent inset !important;
+  -webkit-text-fill-color: #E3E2E3 !important;
+  color: #E3E2E3 !important;
+  background-color: transparent !important;
+  background: transparent !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.underline-input:-moz-autofill {
+  -moz-box-shadow: 0 0 0 1000px transparent inset !important;
+  box-shadow: 0 0 0 1000px transparent inset !important;
+  -moz-text-fill-color: #E3E2E3 !important;
+  color: #E3E2E3 !important;
+  background-color: transparent !important;
+  background: transparent !important;
+}
+
+.underline-input:autofill {
+  box-shadow: 0 0 0 1000px transparent inset !important;
+  color: #E3E2E3 !important;
+  background-color: transparent !important;
+  background: transparent !important;
+}
+
+.underline-input::placeholder {
+  color: var(--YAY-Black-02, #4A4A4A);
+  font-family: "SF Pro Display";
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.78px;
+  text-transform: uppercase;
+}
+
+
+.form-end{
+  width: 20.5rem;
+  color: #4A4A4A;
+  text-align: center;
+  font-family: "SF Pro Display";
+  font-size: 0.625rem;
+  line-height: 19px;
+  letter-spacing: 0.39px;
+  text-transform: uppercase;
+  margin-top:2rem;
+}
+
+
+/* hide number spinners for the desired allocation input */
+.no-spin::-webkit-outer-spin-button,
+.no-spin::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.no-spin[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield; /* modern browsers */
+}
+
+
+
+
+
+
+
+/* Responsive tasarım - sadece gerekli düzenlemeler */
+@media (max-width: 768px) {
+  .form-container {
+    width: 95vw;
+    padding: 30px 15px;
+  }
+  
+  .form-desc {
+    width: 100%;
+    max-width: 378px;
+  }
+  
+  .underline-input {
+    width: 100%;
+    max-width: 419.5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-container {
+    padding: 10px;
+  }
+  
+  .form-container {
+    padding: 25px 10px;
+  }
+}
