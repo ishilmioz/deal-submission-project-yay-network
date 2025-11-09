@@ -68,7 +68,7 @@ YAY Network’ün değerlendirdiği projeler için topluluk ön satış (presale
 [burada](#main2tur)
 <br>
 
-- Kullanıcı bilgilerini form aracılığıyla gönderiyor ve kullanıcının bilgileri ilgili dokümanın "Submissions" sayfasında yeni satırda kaydediliyor.
+- Aktif proje varken kullanıcı bilgilerini form aracılığıyla gönderiyor ve kullanıcının bilgileri ilgili dokümanın "Submissions" sayfasında yeni satırda kaydediliyor.
 <img src="public/sheets3.jpg" width="450" />
 
 [burada](#main3tur)
@@ -80,13 +80,13 @@ YAY Network’ün değerlendirdiği projeler için topluluk ön satış (presale
 - Basit Form: Telegram / Email / Wallet / Allocation alanlarıyla minimal veri toplama.
 - Google Sheets’e Yazma: Submissions sayfasına satır bazlı ekleme, operasyon ekibine raporlama kolaylığı.
 
-## Durum Mesajları:
+## Durum Mesajları
 - Aktif satır yok → Could not fetch deal data. Please try again later.
 - Mükerrer gönderim → You have already submitted for this deal.
 
 ## Teknoloji Yığını
-- Framework: Proje, Next.js (15.3.4) ve React (18.2.0) üzerine kurulu. Kod tabanı JavaScript kullanıyor.
-- Sunucu tarafı (API Routes):
+- Framework: Proje, Next.js (15.3.4) ve React (18.2.0) üzerine kurulu. Kod tabanı JavaScript kullanıyor.<br><br>
+- **Sunucu tarafı (API Routes)**
 - pages/api/deal.js: Deals sayfasını okur, başlık satırından sonra isActive = true/1/yes olan ilk satırı bularak proje adını döndürür.
 - pages/api/submit.js: Submissions sayfasına yeni başvuru ekler. Aynı DealName + WalletAddress kombinasyonu daha önce varsa hata döndürür, yoksa yeni satır ekler.
 
@@ -96,7 +96,7 @@ YAY Network’ün değerlendirdiği projeler için topluluk ön satış (presale
 - Yazma: spreadsheets.values.append
 - lib/sheets.js: Google Service Account bilgileriyle Sheet istemcisi oluşturur (global cache).
 
-## Environment değişkenleri:
+## Environment değişkenleri
 - GOOGLE_SA_EMAIL: Service Account e-posta adresi
 - GOOGLE_SA_KEY: Service Account private key (\n formatlı)
 - SHEET_ID: Kullanılan Google Sheet dokümanının kimliği
@@ -134,7 +134,7 @@ GOOGLE_SA_KEY
 ```
 - Deploy tamamlandığında size bir domain verilir.
 - /api/deal üzerinden test edilebilir.
-- -Form gönderimleri canlı ortamda da doğrudan Submissions sayfasına düşer.
+- Form gönderimleri canlı ortamda da doğrudan Submissions sayfasına düşer.
 - Eğer environment değişkenleri eklenmezse /api/deal ve /api/submit hata döndürür.
 - GOOGLE_SA_KEY değeri burada da \n satır sonlarıyla tek satır olarak girilmelidir.
 - Vercel ortamında .env.local yerine Environment Variables kullanılır.
@@ -206,7 +206,7 @@ The relevant project name and visibility status are fetched from the **Deals** s
 [here](#main2eng)
 <br>
 
-- The user submits their information through the form, and the user’s details are saved in a new row in the “Submissions” sheet of the document.
+- While a project is active, the user submits their information through the form, and the user’s details are recorded as a new row on the “Submissions” page of the corresponding document.
 <img src="public/sheets3.jpg" width="450" />
 
 [here](#main3eng)
@@ -218,13 +218,13 @@ The relevant project name and visibility status are fetched from the **Deals** s
 - Simple Form: Minimal data collection with Telegram / Email / Wallet / Allocation.
 - Google Sheets Write: Adds submissions as rows to the Submissions sheet, making it easy for the operations team to report.
 
-## Status Messages:
+## Status Messages
 - No active row → Could not fetch deal data. Please try again later.
 - Duplicate submission → You have already submitted for this deal.
 
 ## Tech Stack
-- Framework: Built on Next.js (15.3.4) and React (18.2.0). Codebase uses JavaScript.
-- Server-side (API Routes):
+- Framework: Built on Next.js (15.3.4) and React (18.2.0). Codebase uses JavaScript.<br><br>
+- **Server-side (API Routes)**
 - pages/api/deal.js: Reads the Deals sheet, finds the first row after the header where isActive = true/1/yes, and returns the project name.
 - pages/api/submit.js: Adds a new submission to the Submissions sheet. If the same DealName + WalletAddress exists, returns an error; otherwise, appends a new row.
 
@@ -234,7 +234,7 @@ The relevant project name and visibility status are fetched from the **Deals** s
 - Write: spreadsheets.values.append
 - lib/sheets.js: Creates the sheet client using Google Service Account credentials (global cache).
 
-## Environment Variables:
+## Environment Variables
 - GOOGLE_SA_EMAIL: Service Account email address
 - GOOGLE_SA_KEY: Service Account private key (\n formatted)
 - SHEET_ID: ID of the Google Sheet document
