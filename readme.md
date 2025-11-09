@@ -4,6 +4,7 @@
 🇺🇸 [English](#-english)
 
 ## 🇹🇷 Türkçe
+**YAPAY ZEKA DESTEKLİ UÇTAN UCA YAZILIM GELİŞTİRME**
 ## Açıklama
 **Bu proje, yapay zekâ destekli bir geliştirme stratejisiyle hazırlanmıştır. Teknolojik altyapı, uygulama mimarisi ve proje gereksinimlerine yönelik tüm analiz ve teknik planlama tarafımdan gerçekleştirilmiştir. Kod üretim aşamasında ChatGPT ve Cursor gibi yapay zekâ araçları etkin biçimde yönlendirilmiş, geliştirme süreci bu araçlar üzerinden yürütülmüştür. Amaç, yapay zekâ destekli üretim ile hızlı, kontrollü ve yüksek kaliteli bir yazılım çıktısı elde etmektir.**
 
@@ -142,6 +143,7 @@ GOOGLE_SA_KEY
 <br>
 
 ## 🇺🇸 English
+**AI-ASSISTED FULL-STACK DEVELOPMENT**
 ## Description
 **This project was developed using an AI-assisted strategy. All technical planning, analysis, application architecture, and project requirements were carried out by me. During the coding phase, AI tools such as ChatGPT and Cursor were actively guided, and the development process was executed through these tools. The goal is to achieve a fast, controlled, and high-quality software output using AI-assisted development.**
 
