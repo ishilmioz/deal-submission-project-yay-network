@@ -33,6 +33,47 @@ YAY Network’ün değerlendirdiği projeler için topluluk ön satış (presale
 - Yoksa: timestamp + form verileri yeni satır olarak eklenir
 - Başarılı gönderimden sonra kullanıcıya onay mesajı gösterilir.
 
+## Ekran Görüntüleri
+### Kullanıcı Form Sayfası
+- Aktif proje var.
+<img id="main1tur" src="public/main1.jpg" width="450" />
+<br>
+
+- Aktif proje varken kullanıcı bilgilerini giriyor.
+<img id="main3tur" src="public/main3.jpg" width="450" />
+<br>
+
+- Kullanıcı bilgilerini gönderiyor ve "Application submitted successfully!" dönüyor.
+<img src="public/main4.jpg" width="450" />
+<br>
+
+- Kullanıcı aynı cüzdan adresiyle yeni bir kayıt göndermeye çalışıyor. Mükerrer kaydı önlemek adına giriş kabul edilmiyor ve "You have already submitted for this deal." dönüyor.
+<img src="public/main5.jpg" width="450" />
+<br>
+
+- Aktif proje yok.
+<img id="main2tur" src="public/main2.jpg" width="450" />
+<br>
+
+### Google Sheets
+- İlgili dokümanın "Deals" sayfasının A2 hücresinde projenin adı, ve B2 hücresinde projenin aktif olduğu görülüyor. Bu haliyle kullanıcı form sayfasına "EXAMPLE DEAL" olarak dönüyor.
+<img src="public/sheets1.jpg" width="450" />
+
+[burada](#main1tur)
+<br>
+
+- İlgili dokümanın "Deals" sayfasının A2 hücresinde projenin adı, ve B2 hücresinde projenin aktif olmadığı görülüyor. Bu haliyle kullanıcı form sayfasında  "Could not fetch deal data. Please try again later." uyarısı dönüyor.
+<img src="public/sheets2.jpg" width="450" />
+
+[burada](#main2tur)
+<br>
+
+- Kullanıcı bilgilerini form aracılığıyla gönderiyor ve kullanıcının bilgileri ilgili dokümanın "Submissions" sayfasında yeni satırda kaydediliyor.
+<img src="public/sheets3.jpg" width="450" />
+
+[burada](#main3tur)
+<br>
+
 ## Özellikler
 - Dinamik Proje Bilgisi: Proje adı ve aktiflik durumu doğrudan Google Sheets’ten yönetilir.
 - Tekil Başvuru Doğrulaması: Aynı deal için aynı cüzdanla mükerrer başvuru engellenir.
@@ -129,6 +170,47 @@ The relevant project name and visibility status are fetched from the **Deals** s
 - If exists: “You have already submitted for this deal.” (no new row added)
 - If not: a new row with timestamp + form data is added
 - After a successful submission, a confirmation message is shown to the user.
+
+## Screenshots
+### User Form Page
+- There is an active project.
+<img id="main1eng" src="public/main1.jpg" width="450" />
+<br>
+
+- The user enters their information while there is an active project.
+<img id="main3eng" src="public/main3.jpg" width="450" />
+<br>
+
+- The user submits their information and it returns “Application submitted successfully!”.
+<img src="public/main4.jpg" width="450" />
+<br>
+
+- The user tries to submit a new application with the same wallet address. To prevent duplicate submissions, the entry is not accepted and it returns “You have already submitted for this deal.”
+<img src="public/main5.jpg" width="450" />
+<br>
+
+- There is no active project.
+<img id="main2eng" src="public/main2.jpg" width="450" />
+<br>
+
+### Google Sheets
+- In the “Deals” sheet of the document, the project’s name is shown in cell A2 and its active status is shown in cell B2. In this case, it is returned to the user’s form page as “EXAMPLE DEAL.”
+<img src="public/sheets1.jpg" width="450" />
+
+[here](#main1eng)
+<br>
+
+- In the “Deals” sheet of the document, the project’s name is shown in cell A2 and its status in cell B2 indicates that it is not active. In this case, the user’s form page returns the warning “Could not fetch deal data. Please try again later.”
+<img src="public/sheets2.jpg" width="450" />
+
+[here](#main2eng)
+<br>
+
+- The user submits their information through the form, and the user’s details are saved in a new row in the “Submissions” sheet of the document.
+<img src="public/sheets3.jpg" width="450" />
+
+[here](#main3eng)
+<br>
 
 ## Features
 - Dynamic Project Data: Project name and status are managed directly through Google Sheets.
